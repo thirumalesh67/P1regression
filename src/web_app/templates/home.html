@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Regression</title>
+    <!-- Add Bootstrap CSS link here -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">House Price Regression</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header with Image and Title -->
+    <header class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="https://www.forbes.com/advisor/wp-content/uploads/2021/12/housing_predictions.jpg" alt="Real Estate Image" class="img-fluid">
+            </div>
+            <div class="col-md-6">
+                <h1 class="display-4">House Price Regression</h1>
+                <p class="lead">Predict house prices using Advanced Regression Techniques.</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Form for Inputting Features -->
+    <section class="container mt-5">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h2>Enter House Features</h2>
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="GrLivArea" class="form-label">GrLivArea:</label>
+                        <input type="text" class="form-control" id="GrLivArea" name="GrLivArea">
+                    </div>
+                    <div class="mb-3">
+                        <label for="LotArea" class="form-label">LotArea:</label>
+                        <input type="text" class="form-control" id="LotArea" name="LotArea">
+                    </div>
+                    <div class="mb-3">
+                        <label for="TotalBsmtSF" class="form-label">TotalBsmtSF:</label>
+                        <input type="text" class="form-control" id="TotalBsmtSF" name="TotalBsmtSF">
+                    </div>
+                    <div class="mb-3">
+                        <label for="BsmtUnfSF" class="form-label">BsmtUnfSF:</label>
+                        <input type="text" class="form-control" id="BsmtUnfSF" name="BsmtUnfSF">
+                    </div>
+                    <div class="mb-3">
+                        <label for="GarageArea" class="form-label">GarageArea:</label>
+                        <input type="text" class="form-control" id="GarageArea" name="GarageArea">
+                    </div>
+                    <div class="mb-3">
+                        <label for="YearBuilt" class="form-label">YearBuilt:</label>
+                        <input type="text" class="form-control" id="YearBuilt" name="YearBuilt">
+                    </div>
+                    <div class="mb-3">
+                        <label for="LotFrontage" class="form-label">LotFrontage:</label>
+                        <input type="text" class="form-control" id="LotFrontage" name="LotFrontage">
+                    </div>
+                    <div class="mb-3">
+                        <label for="YearRemodAdd" class="form-label">YearRemodAdd:</label>
+                        <input type="text" class="form-control" id="YearRemodAdd" name="YearRemodAdd">
+                    </div>
+                    <div class="mb-3">
+                        <label for="BsmtFinSF1" class="form-label">BsmtFinSF1:</label>
+                        <input type="text" class="form-control" id="BsmtFinSF1" name="BsmtFinSF1">
+                    </div>
+                    <div class="mb-3">
+                        <label for="OpenPorchSF" class="form-label">OpenPorchSF:</label>
+                        <input type="text" class="form-control" id="OpenPorchSF" name="OpenPorchSF">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Predict Price</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add Bootstrap JS and jQuery links here (optional) -->
+    <!-- This template includes Bootstrap 5.0.0-beta2. You can update the version as needed. -->
+
+    <!-- Optional: Add your custom JavaScript here -->
+
+</body>
+</html>
