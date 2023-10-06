@@ -7,11 +7,11 @@ warnings.filterwarnings('ignore')
 
 def home_page(request):
     if request.method == 'POST':
-        rf_model = joblib.load('../../models/rforest.pkl')
-        knn_model = joblib.load('../../models/knnModel.pkl')
-        gboost_model = joblib.load('../../models/gboostModel.pkl')
-        xgboost_model = joblib.load('../../models/xgboost.pkl')
-        stacking_model = joblib.load('../../models/stackingModel.pkl')
+        rf_model = joblib.load('../models/rforest.pkl')
+        knn_model = joblib.load('../models/knnModel.pkl')
+        gboost_model = joblib.load('../models/gboostModel.pkl')
+        xgboost_model = joblib.load('../models/xgboost.pkl')
+        stacking_model = joblib.load('../models/stackingModel.pkl')
 
 
         grlivarea = float(request.POST.get('GrLivArea'))
