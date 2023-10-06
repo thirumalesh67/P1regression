@@ -26,6 +26,7 @@ SECRET_KEY = 'django-insecure-o*c9=q1ifa-mx2-^0k3nixtu@yj32%_jvb)rar@&_v3gtl0553
 DEBUG = True
 
 ALLOWED_HOSTS = ["housepricepred5214.azurewebsites.net"]
+CSRF_TRUSTED_ORIGINS = ['https://housepricepred5214.azurewebsites.net']
 
 
 # Application definition
