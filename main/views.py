@@ -1,17 +1,20 @@
 from django.shortcuts import render
 import joblib
 import warnings
+import os
+from pathlib import Path
 warnings.filterwarnings('ignore')
 
 # Create your views here.
 
 def home_page(request):
+    BASE_DIR = Path(__file__).resolve().parent.parent
     if request.method == 'POST':
-        rf_model = joblib.load('../models/rforest.pkl')
-        knn_model = joblib.load('../models/knnModel.pkl')
-        gboost_model = joblib.load('../models/gboostModel.pkl')
-        xgboost_model = joblib.load('../models/xgboost.pkl')
-        stacking_model = joblib.load('../models/stackingModel.pkl')
+        rf_model = joblib.load(os.path.join(BASE_DIR, 'models', 'rforest.pkl'))
+        knn_model = joblib.load(os.path.join(BASE_DIR, 'models', 'knnModel.pkl'))
+        gboost_model = joblib.load(os.path.join(BASE_DIR, 'models', 'gboostModel.pkl'))
+        xgboost_model = joblib.load(os.path.join(BASE_DIR, 'models', 'xgboost.pkl'))
+        stacking_model = joblib.load(os.path.join(BASE_DIR, 'models', 'stackingModel.pkl'))
 
 
         grlivarea = float(request.POST.get('GrLivArea'))
